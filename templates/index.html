@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION // Real-Time Image Recognition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-mark">◉</span>
+            <span class="brand-text">VISION</span>
+        </div>
+        <div class="topbar-meta">
+            <span class="meta-item"><span class="dot dot-live"></span> MODEL: MobileNetV2</span>
+            <span class="meta-item">CLASSES: 1000</span>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow">// Image Recognition System</p>
+            <h1>See what the <span class="highlight">machine sees.</span></h1>
+            <p class="subtext">
+                Upload any image — an object, an animal, or a person — and a pretrained
+                deep learning model identifies it in real time, complete with confidence
+                scores and human face detection.
+            </p>
+            <div class="stat-row">
+                <div class="stat">
+                    <span class="stat-num">224×224</span>
+                    <span class="stat-label">Input Resolution</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">&lt;1s</span>
+                    <span class="stat-label">Inference Time</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">Top-3</span>
+                    <span class="stat-label">Predictions</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scanner-wrap">
+            <div class="scanner" id="scanner">
+                <div class="corner corner-tl"></div>
+                <div class="corner corner-tr"></div>
+                <div class="corner corner-bl"></div>
+                <div class="corner corner-br"></div>
+
+                <div class="scan-grid"></div>
+                <div class="scan-line" id="scan-line"></div>
+
+                <div class="scanner-content" id="scanner-content">
+                    <div class="upload-icon">⬆</div>
+                    <p class="upload-text">Drop image here</p>
+                    <p class="upload-subtext">or click to browse — PNG, JPG, WEBP</p>
+                    <input type="file" id="file-input" accept="image/png, image/jpeg, image/webp" hidden>
+                </div>
+
+                <img id="preview-image" class="preview-image" alt="Uploaded preview">
+
+                <div class="status-bar" id="status-bar">
+                    <span id="status-text">AWAITING INPUT</span>
+                </div>
+            </div>
+
+            <button class="scan-btn" id="scan-btn" disabled>ANALYZE IMAGE</button>
+        </div>
+    </main>
+
+    <section class="results" id="results-section">
+        <p class="eyebrow">// Analysis Output</p>
+        <div class="results-grid" id="results-grid"></div>
+    </section>
+
+    <footer class="footer">
+        <p>Built with TensorFlow / Keras · OpenCV · Flask — Deepanshu Bisht</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</body>
+</html>
