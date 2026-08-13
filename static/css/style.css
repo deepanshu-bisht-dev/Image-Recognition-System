@@ -452,3 +452,53 @@ body {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
+
+/* ===== Light Theme ===== */
+[data-theme="light"] {
+    --bg-base: #F4F7F5;
+    --bg-panel: #FFFFFF;
+    --bg-panel-2: #EDF2EF;
+    --accent: #1E9E4A;
+    --accent-dim: #A9D9BB;
+    --warn: #C97A00;
+    --text-1: #10231A;
+    --text-2: #5B6E64;
+    --border: #DCE6E0;
+}
+
+[data-theme="light"] .noise-overlay {
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(30, 158, 74, 0.02) 0px,
+            rgba(30, 158, 74, 0.02) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+}
+
+/* ===== Theme Toggle Button ===== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.theme-toggle .icon {
+    font-size: 13px;
+}

@@ -132,3 +132,31 @@ function renderResults(predictions) {
         });
     });
 }
+
+// ---- Dark / Light theme toggle ----
+const themeToggleBtn = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
+const themeLabel = document.getElementById("theme-label");
+
+function applyTheme(theme) {
+    if (theme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+        themeIcon.textContent = "☀";
+        themeLabel.textContent = "LIGHT";
+    } else {
+        document.documentElement.removeAttribute("data-theme");
+        themeIcon.textContent = "🌙";
+        themeLabel.textContent = "DARK";
+    }
+}
+
+// Load saved preference (defaults to dark)
+const savedTheme = localStorage.getItem("vision-theme") || "dark";
+applyTheme(savedTheme);
+
+themeToggleBtn.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+    const next = current === "light" ? "dark" : "light";
+    applyTheme(next);
+    localStorage.setItem("vision-theme", next);
+});
