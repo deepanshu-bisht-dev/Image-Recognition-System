@@ -1,7 +1,7 @@
 """
 Image Recognition System - Flask app.
 Upload an image, get real-time predictions from a pretrained
-MobileNetV2 model (1000 ImageNet classes)
+MobileNetV2 model (1000 ImageNet classes).
 """
 
 import os
