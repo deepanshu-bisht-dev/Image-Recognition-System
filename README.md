@@ -28,12 +28,6 @@
 
 Built during my **Python Developer Internship at Codec Technologies.**
 
-<div align="center">
-<img src="https://via.placeholder.com/850x480/0F2027/00F5D4?text=%F0%9F%93%B8+ADD+DEMO+SCREENSHOT+OR+GIF+HERE" alt="VISION demo" width="85%"/>
-
-<sub>👆 Replace this with a real screenshot or screen-recording GIF of the scanner UI in action — this is the single biggest upgrade you can make to this README.</sub>
-</div>
-
 <br/>
 
 ## 📋 Table of Contents
@@ -64,13 +58,11 @@ Built during my **Python Developer Internship at Codec Technologies.**
 
 ## 🎬 Demo
 
-<div align="center">
-
-<img src="https://via.placeholder.com/280x520/0F2027/00F5D4?text=Upload" width="30%"/> <img src="https://via.placeholder.com/280x520/0F2027/00F5D4?text=Scanning" width="30%"/> <img src="https://via.placeholder.com/280x520/0F2027/00F5D4?text=Results" width="30%"/>
-
-<sub>Swap these three placeholders for real screenshots: (1) drag-and-drop upload screen, (2) the scan-line animation mid-inference, (3) the results panel with confidence bars.</sub>
-
-</div>
+> 📸 **Add your own screenshots here.** Create an `assets/` folder in the repo, drop in 2-3 screenshots (upload screen, scan animation, results panel), then reference them like this:
+> ```markdown
+> <img src="assets/demo.png" width="85%"/>
+> ```
+> This renders 100% reliably since the image lives inside your own repo — no third-party service involved.
 
 <br/>
 
